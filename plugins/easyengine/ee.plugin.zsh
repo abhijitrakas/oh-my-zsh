@@ -36,55 +36,55 @@ alias eescwsdomf='sudo ee site create $1 --wpsubdom --wpfc && create_etc_host_en
 alias eescwsdomr='sudo ee site create $1 --wpsubdom --wpredis && create_etc_host_entry $1' # install wpmu-subdomain + nginx redis_cache
 
 ## site delete commands ##
-alias eesd='sudo ee site delete $1 && create_etc_host_entry $1' # delete whole site.
+alias eesd='sudo ee site delete $1' # delete whole site.
 
-alias eesdn='sudo ee site delete $1 --no-prompt && create_etc_host_entry $1' # delete whole site without prompting.
-alias eesdf='sudo ee site delete $1 --files && create_etc_host_entry $1' # delete site files only.
-alias eesdd='sudo ee site delete $1 --db && create_etc_host_entry $1' # delete site database only.
+alias eesdn='sudo ee site delete $1 --no-prompt' # delete whole site without prompting.
+alias eesdf='sudo ee site delete $1 --files' # delete site files only.
+alias eesdd='sudo ee site delete $1 --db' # delete site database only.
 
-alias eesdfn='sudo ee site delete $1 --files --no-prompt && create_etc_host_entry $1' # delete site files without prompting.
-alias eesddn='sudo ee site delete $1 --db --no-prompt && create_etc_host_entry $1' # delete site database without prompting.
+alias eesdfn='sudo ee site delete $1 --files --no-prompt' # delete site files without prompting.
+alias eesddn='sudo ee site delete $1 --db --no-prompt' # delete site database without prompting.
 
 ## site edit command ##
-alias eese='sudo ee site edit $1 && create_etc_host_entry $1' # edit site configuration
+alias eese='sudo ee site edit $1' # edit site configuration
 
 ## site list commands ##
-alias eesl='sudo ee site list && create_etc_host_entry $1'  # show list of sites present in server
-alias eesle='sudo ee site list --enabled && create_etc_host_entry $1' # Show list of sites present and enabled in server
-alias eesld='sudo ee site list --disabled && create_etc_host_entry $1' # Show list of sites present and disabled in server
+alias eesl='sudo ee site list'  # show list of sites present in server
+alias eesle='sudo ee site list --enabled' # Show list of sites present and enabled in server
+alias eesld='sudo ee site list --disabled' # Show list of sites present and disabled in server
 
 ## site info command ##
-alias eesi='sudo ee site info $1 && create_etc_host_entry $1' # show information about site
+alias eesi='sudo ee site info $1' # show information about site
 
 ## site ngnix show configuration ##
-alias eess='sudo ee site show $1 && create_etc_host_entry $1' # nginx configuration for the website can be viewed
+alias eess='sudo ee site show $1' # nginx configuration for the website can be viewed
 
 ## site update command ##
-alias eesup='sudo ee site update $1 --password && create_etc_host_entry $1' # update WordPress user password
-alias eesuw='sudo ee site update $1 --wp && create_etc_host_entry $1' # update non WordPress sites to WordPress sites
-alias eesuwsdi='sudo ee site update $1 --wpsubdir && create_etc_host_entry $1' # update WordPress single site to WordPress multisite as subdirectory
-alias eesuwsdom='sudo ee site update $1 --wpsubdomain && create_etc_host_entry $1' # update WordPress single site to WordPress multisite as subdomain
+alias eesup='sudo ee site update $1 --password' # update WordPress user password
+alias eesuw='sudo ee site update $1 --wp' # update non WordPress sites to WordPress sites
+alias eesuwsdi='sudo ee site update $1 --wpsubdir' # update WordPress single site to WordPress multisite as subdirectory
+alias eesuwsdom='sudo ee site update $1 --wpsubdomain' # update WordPress single site to WordPress multisite as subdomain
 
 ### update cache type for WordPress sites ###
-alias eesuwf='sudo ee site update $1 --wp --wpfc && create_etc_host_entry $1'
-alias eesuw3='sudo ee site update $1 --wp --w3tc && create_etc_host_entry $1'
-alias eesuws='sudo ee site update $1 --wp --wpsc && create_etc_host_entry $1'
+alias eesuwf='sudo ee site update $1 --wp --wpfc'
+alias eesuw3='sudo ee site update $1 --wp --w3tc'
+alias eesuws='sudo ee site update $1 --wp --wpsc'
 
 ### update WordPress single site to WordPress multisite with caching as subdirectory ###
-alias eesuwsdif='sudo ee site update $1 --wpsubdir --wpfc && create_etc_host_entry $1' # update WordPress site with wpmu-subdirectory + nginx fastcgi_cache
-alias eesuwsdi3='sudo ee site update $1 --wpsubdir --w3tc && create_etc_host_entry $1' # update WordPress site with wpmu-subdirectory + w3-total-cache plugin
-alias eesuwsdis='sudo ee site update $1 --wpsubdir --wpsc && create_etc_host_entry $1' # update WordPress site with wpmu-subdirectory + wp-super-cache plugin
+alias eesuwsdif='sudo ee site update $1 --wpsubdir --wpfc' # update WordPress site with wpmu-subdirectory + nginx fastcgi_cache
+alias eesuwsdi3='sudo ee site update $1 --wpsubdir --w3tc' # update WordPress site with wpmu-subdirectory + w3-total-cache plugin
+alias eesuwsdis='sudo ee site update $1 --wpsubdir --wpsc' # update WordPress site with wpmu-subdirectory + wp-super-cache plugin
 
 ### update WordPress single site to WordPress multisite with caching as subdomain ###
-alias eesuwsdomf='sudo ee site update $1 --wpsubdomain --wpfc && create_etc_host_entry $1' # update WordPress site with wpmu-subdomain + nginx fastcgi_cache 
-alias eesuwsdom3='sudo ee site update $1 --wpsubdomain --w3tc && create_etc_host_entry $1' # update WordPress site with wpmu-subdomain + w3-total-cache plugin
-alias eesuwsdoms='sudo ee site update $1 --wpsubdomain --wpsc && create_etc_host_entry $1' # update WordPress site with wpmu-subdomain + wp-super-cache plugin
+alias eesuwsdomf='sudo ee site update $1 --wpsubdomain --wpfc' # update WordPress site with wpmu-subdomain + nginx fastcgi_cache 
+alias eesuwsdom3='sudo ee site update $1 --wpsubdomain --w3tc' # update WordPress site with wpmu-subdomain + w3-total-cache plugin
+alias eesuwsdoms='sudo ee site update $1 --wpsubdomain --wpsc' # update WordPress site with wpmu-subdomain + wp-super-cache plugin
 
 ## site enable command ##
-alias eese='sudo ee site enable $1 && create_etc_host_entry $1' # adding symbolic link in sites-enabled to sites-available
+alias eese='sudo ee site enable $1' # adding symbolic link in sites-enabled to sites-available
 
 ## site disable command ##
-alias eesd='sudo ee site disable $1 && create_etc_host_entry $1' # removing symbolic link in sites-enabled to sites-available
+alias eesd='sudo ee site disable $1' # removing symbolic link in sites-enabled to sites-available
 
 ## monitor site log ##
-alias eesl='sudo ee site log $1 && create_etc_host_entry $1'
+alias eesl='sudo ee site log $1'
