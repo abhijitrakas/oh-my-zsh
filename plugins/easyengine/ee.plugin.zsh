@@ -23,7 +23,7 @@ alias eescws='sudo ee site create $1 --wpsc && create_etc_host_entry $1' # insta
 alias eescwf='sudo ee site create $1 --wpfc && create_etc_host_entry $1' # install wordpress + nginx fastcgi_cache
 alias eescwr='sudo ee site create $1 --wpredis && create_etc_host_entry $1' # install wordpress + nginx redis_cache
 
-alias eescwsdi='sudo ee site create $1 --wpsubdir && create_etc_host_entry $1' # install wpmu-subdirectory without any page caching
+alias eescwsdir='sudo ee site create $1 --wpsubdir && create_etc_host_entry $1' # install wpmu-subdirectory without any page caching
 alias eescwsdir3='sudo ee site create $1 --wpsubdir --w3tc && create_etc_host_entry $1' # install wpmu-subdirectory with w3-total-cache plugin
 alias eescwsdirs='sudo ee site create $1 --wpsubdir --wpsc && create_etc_host_entry $1' # install wpmu-subdirectory with wp-super-cache plugin
 alias eescwsdirf='sudo ee site create $1 --wpsubdir --wpfc && create_etc_host_entry $1' # install wpmu-subdirectory + nginx fastcgi_cache
@@ -56,13 +56,13 @@ alias eesld='sudo ee site list --disabled' # Show list of sites present and disa
 ## site info command ##
 alias eesi='sudo ee site info $1' # show information about site
 
-## site ngnix show configuration ##
+## site ngnix configuration ##
 alias eess='sudo ee site show $1' # nginx configuration for the website can be viewed
 
 ## site update command ##
 alias eesup='sudo ee site update $1 --password' # update WordPress user password
 alias eesuw='sudo ee site update $1 --wp' # update non WordPress sites to WordPress sites
-alias eesuwsdi='sudo ee site update $1 --wpsubdir' # update WordPress single site to WordPress multisite as subdirectory
+alias eesuwsdir='sudo ee site update $1 --wpsubdir' # update WordPress single site to WordPress multisite as subdirectory
 alias eesuwsdom='sudo ee site update $1 --wpsubdomain' # update WordPress single site to WordPress multisite as subdomain
 
 ### update cache type for WordPress sites ###
@@ -71,9 +71,9 @@ alias eesuw3='sudo ee site update $1 --wp --w3tc'
 alias eesuws='sudo ee site update $1 --wp --wpsc'
 
 ### update WordPress single site to WordPress multisite with caching as subdirectory ###
-alias eesuwsdif='sudo ee site update $1 --wpsubdir --wpfc' # update WordPress site with wpmu-subdirectory + nginx fastcgi_cache
-alias eesuwsdi3='sudo ee site update $1 --wpsubdir --w3tc' # update WordPress site with wpmu-subdirectory + w3-total-cache plugin
-alias eesuwsdis='sudo ee site update $1 --wpsubdir --wpsc' # update WordPress site with wpmu-subdirectory + wp-super-cache plugin
+alias eesuwsdirf='sudo ee site update $1 --wpsubdir --wpfc' # update WordPress site with wpmu-subdirectory + nginx fastcgi_cache
+alias eesuwsdir3='sudo ee site update $1 --wpsubdir --w3tc' # update WordPress site with wpmu-subdirectory + w3-total-cache plugin
+alias eesuwsdirs='sudo ee site update $1 --wpsubdir --wpsc' # update WordPress site with wpmu-subdirectory + wp-super-cache plugin
 
 ### update WordPress single site to WordPress multisite with caching as subdomain ###
 alias eesuwsdomf='sudo ee site update $1 --wpsubdomain --wpfc' # update WordPress site with wpmu-subdomain + nginx fastcgi_cache 
